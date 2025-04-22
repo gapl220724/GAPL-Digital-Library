@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global's Digital Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico.jpg">-->
+    <link rel="icon" type="image/x-icon" href="https://drive.google.com/thumbnail?id=1pnArN_cqMcgjLCp-f_FiD4Z022fZboJn">
+
+    <style>
+        body {
+            background: url("../images/Background.png") no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header Styling */
+        .header-container {
+            background: linear-gradient(to right, #007bff, #0e0865cb);
+            color: rgb(247, 171, 9);
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers content horizontally */
+            border-radius: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .header-container img {
+            width: 180px; /* Adjust logo size */
+            height: 100px;
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column; /* Stack h1 and p */
+            align-items: center; /* Center both h1 and p */
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .header-container p {
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        /*footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            color: #101010;
+        }*/
+        .paragraph-container {
+        background: linear-gradient(to right, #007bff, #0e0865cb); /* Light blue gradient */
+        padding: 0px;
+        border-radius: 5px;
+        text-align: center;
+        color: rgb(247, 171, 9); /* Ensure text is visible */
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+
+        /* Section Styles */
+        .section {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .aluminium-section {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+        }
+
+        .tech-section {
+            background: linear-gradient(to right, #d4edda, #c8e6c9);
+        }
+        /*scrollable container for each section */
+        .scrollable-section {
+            max-height: 400px; /* Adjust height as needed */
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            padding: 5px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 3px solid #007bff;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        /*btn-custom {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+        }*/
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        /* Apply gradient background to footer */
+        footer 
+            {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1rem;
+            color: rgb(247, 171, 9);
+            background: linear-gradient(to right, #007bff, #0e0865cb); /* Aluminium section gradient */
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        hr {
+            width: 75%;
+            color: white;
+            background-color: rgb(247, 171, 9);
+            /*border: 2px solid white;*/
+            margin: 10px auto;
+            border: 2px solid var(--primary-color); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-1">
+        <!-- Header Section -->
+        <div class="header-container row align-items-center">
+            <div class="col-md-2 text-center">
+                <!--<img src="images/GAPL_LOGO.png" alt="GAPL Logo" class="img-fluid">-->
+                <img src="https://drive.google.com/thumbnail?id=1-vmUuTSyWvfRiCBlXM0Ga9eghoduX8ni" alt="GAPL LOGO" style="border-radius: 10px;">
+            </div>
+            <div class="col-md-8 text-center">
+                <h1>Welcome To Digital Library</h1>
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    The capacity to learn is a Gift; the ability to learn is a Skill; the willingness to learn is a choice.- APJ Abdul Kalam
+                </p>
+            </div>
+            <div class="col-md-2 text-end">
+                <button type="button" class="btn btn-danger glyphicon glyphicon-log-in" onclick="logout()"></span>>Logout</button>
+
+                <script>
+                    const loggedIn = sessionStorage.getItem('loggedIn');
+                    if (!loggedIn) {
+                        alert("You are not logged in.");
+                        window.location.href = "../index.html";
+                    }
+                  </script>
+
+                <script>
+                    function logout() {
+                    // Keep Remember Me credentials (if saved), just remove active session
+                    sessionStorage.removeItem('loggedIn'); // If you use sessionStorage to track login
+                    window.location.href = "../index.html";
+                }
+                </script>              
+            </div>
+        </div>
+        
+        <div class="paragraph-container">
+            <p class="text-center">
+                This library provides access to the latest magazines and journals on aluminium, technology trends, and AI.
+            </p>
+        </div>
+        
+        <div class="container mt-1 ">
+            <div class="row justify-content-center; col-md-8 mx-auto" style="background: linear-gradient(to right, #d4edda, #c8e6c9);margin-bottom: 10px;border-radius: 5px;">
+                <button class="btn btn-outline-success"; onclick="document.location='AL_mag.html';">Go to Aluminium Industry Magazines Page</button>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#feedbackModal"><b>Click to give your Feedback!!</b></button>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Aluminium Industry Magazines -->        
+                        <!--
+                        <li class="list-group-item">
+                            <div>
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium International Today (AIT)</a>
+                                <p class="mb-0">Journal dedicated to the production and processing of aluminium.</p>
+                            </div>
+                            <div class="text-end">
+                                <a href="https://aluminiumtoday.com/about-aluminium-international-today" target="_blank" class="btn btn-custom btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+                        -->                                    
+            <!-- New Technology Trends -->
+            <div class="col-md-6">
+                    <div class="section tech-section">
+                    <h2 class="text-success section-title">New Technology Trends</h2>
+                        <div class="scrollable-section">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">MIT Technology Review</a>
+                                        <p class="mb-0 small text-muted">MIT University website for latest trend in technology.</p>
+                                    </div>
+                                    <a href="https://www.technologyreview.com/account/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Automation World [Machine Shop]</a>
+                                        <p class="mb-0">Latest automation trends in Manufacturing industry</p>
+                                    </div>
+                                    <a href="https://www.automationworld.com/factory" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Modern Machine Shop</a>
+                                        <p class="mb-0">Machine Shop latests in tooling,CNCs and other techniques</p>
+                                    </div>
+                                    <a href="https://www.mmsonline.com/articles" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Internet Of Things (IOT) Analytics</a>
+                                        <p class="mb-0">Internet of things(IoT) based latest developments.</p>
+                                    </div>
+                                    
+                                    <a href="https://iot-analytics.com/research-blog/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                                    
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">WebFX</a>
+                                        <p class="mb-0">Industry latest trends, insights and sustainability goals.</p>
+                                    </div>
+                                    
+                                    <a href="https://www.webfx.com/industries/industrial/manufacturing/manufacturing-industry-trends/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                                    
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Safety Stage [Safety]</a>
+                                        <p class="mb-0">Best Safety Practices!</p>
+                                    </div>                    
+                                    <a href="https://safetystage.com/osha-compliance/best-safety-practices/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                           
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">OSHA Chemical Handling Processes [Safety]</a>
+                                        <p class="mb-0">OSHA Safe handling of chemical-hazards</p>
+                                    </div>                    
+                                    <a href="https://www.osha.gov/chemical-hazards" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                           
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Basics of PLC [Maintenance]</a>
+                                        <p class="mb-0">Learning initiative on PLCs</p>
+                                    </div>                    
+                                    <a href="https://basicplc.com/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                           
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Packing and Dispatch-1</a>
+                                        <p class="mb-0">How to Pack Aluminum Products</p>
+                                    </div>                    
+                                    <a href="https://www.chalcoaluminum.com/blog/product-packaging/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                           
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Packing and Dispatch-2</a>
+                                        <p class="mb-0">Aluminum Profile Packaging and Transportation</p>
+                                    </div>                    
+                                    <a href="https://sinoextrud.com/aluminum-profile-packaging-transportation/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                           
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+             <!-- Internal Documents -->
+             <div class="col-md-6">
+                <div class="section tech-section">
+                    <h2 class="text-success section-title">Access To Internal Documents</h2>
+                        <div class="scrollable-section">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <div class="text-truncate">
+                                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">APQP Documents</a>
+                                            <p class="mb-0">APQP 2nd Edition Documents.</p>
+                                        </div>
+                                    </div>
+                                    <a href="../docs/APQP Edition 2 -2.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="text-truncate">
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">APQP Documents</a>
+                                        <p class="mb-0">APQP 3rd Edition Documents.</p>
+                                    </div>
+                                    <a href="../docs/APQP-Third-Edition_hzeinal.ir-1.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                        </li>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">Control-Plan</a>
+                                        <p class="mb-0">Control-Plan-Reference-Manual Documents</p>
+                                    </div>
+                                    <a href="../docs/Control-Plan-Reference-Manual_hzeinal.ir.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                        </li>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <div>
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">FMEA Documents</a>
+                                        <p class="mb-0">FMEA 4th Edition.</p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="../docs/FMEA 4rth Edition.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                            </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div>
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">MSA Documents</a>
+                                        <p class="mb-0">MSA 4th Edition.</p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="../docs/MSA 4rth Edition.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                            </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div>
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">PPAP Documents</a>
+                                        <p class="mb-0">PPAP 4th Edition Documents.</p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="../docs/PPAP 4rth Edition.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                            </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div>
+                                        <a href="#" style="font-size: 1.2rem; font-weight: bold;">VDA Proecess Audit Documents</a>
+                                        <p class="mb-0">VDA 6.3 or German Association of the Automotive Industry.</p>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="../docs/VDA 6.3 or German Association of the Automotive Industry.pdf" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>                            </div>
+                                </li>
+                            </ul>
+                        </div>                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="feedbackModalLabel">Employee Feedback</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 80vh;">
+            <iframe src="emp_feedback.html" width="100%" height="100%" frameborder="0" style="border: none;"></iframe>
+            </div>
+        </div>
+        </div>
+    </div>
+
+        <!--Prevent Back Navigation After Logout-->
+        <script>
+            const username = localStorage.getItem('username');
+            const password = localStorage.getItem('password');
+            
+            if (!username || !password) {
+                // If no login info, redirect to login page
+                alert("You are not logged in.");
+                window.location.href = "../index.html";
+            }
+        </script>
+<footer>
+    <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" > Excellence is a continuos process and not an accident. Keep Learning and Keep improving!</p>
+    <p style="font-size:0.9rem;"> Thank you for visiting GAPL Digital Library!</p>
+    <p style="font-size:0.9rem;"> For any Queries or feedback, contact IT Support on:  it@globalaluminium.com</p>
+</footer> 
+</body>
+</html>

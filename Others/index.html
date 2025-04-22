@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazines & Journals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico.jpg">-->
+    <link rel="icon" type="image/x-icon" href="https://drive.google.com/thumbnail?id=1pnArN_cqMcgjLCp-f_FiD4Z022fZboJn">
+
+    <style>
+        body {
+            background: url("images/Background.png") no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header Styling */
+        .header-container {
+            background: linear-gradient(to right, #007bff, #0e0865cb);
+            color: rgb(247, 171, 9);
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers content horizontally */
+            border-radius: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .header-container img {
+            width: 180px; /* Adjust logo size */
+            height: 100px;
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column; /* Stack h1 and p */
+            align-items: center; /* Center both h1 and p */
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .header-container p {
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        /*footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            color: #101010;
+        }*/
+        .paragraph-container {
+        background: linear-gradient(to right, #007bff, #0e0865cb); /* Light blue gradient */
+        padding: 0px;
+        border-radius: 5px;
+        text-align: center;
+        color: rgb(247, 171, 9); /* Ensure text is visible */
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+        /* Section Styles */
+        .section {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .aluminium-section {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+        }
+
+        .tech-section {
+            background: linear-gradient(to right, #d4edda, #c8e6c9);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            padding: 5px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 3px solid #007bff;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        /*btn-custom {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+        }*/
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        /* Apply gradient background to footer */
+        footer 
+            {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1rem;
+            color: rgb(247, 171, 9);
+            background: linear-gradient(to right, #007bff, #0e0865cb); /* Aluminium section gradient */
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        hr {
+            width: 75%;
+            color: white;
+            background-color: rgb(247, 171, 9);
+            /*border: 2px solid white;*/
+            margin: 10px auto;
+            border: 2px solid var(--primary-color); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Header Section -->
+        <div class="header-container row align-items-center">
+            <div class="col-md-2 text-center">
+                <!--<img src="images/GAPL_LOGO.png" alt="GAPL Logo" class="img-fluid">-->
+                <img src="https://drive.google.com/thumbnail?id=1-vmUuTSyWvfRiCBlXM0Ga9eghoduX8ni" alt="GAPL LOGO">
+            </div>
+            <div class="col-md-10 text-center">
+                <h1>Welcome To Digital Library</h1>
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">The capacity to learn is a Gift; the ability to learn is a Skill; the willingness to learn is a choice.- APJ Abdul Kalam</p>
+            </div>
+        </div>
+        
+        
+        <hr>
+        <div class="paragraph-container">
+            <p class="text-center">
+                Access to learn the latest magazines and journals on aluminium, technology trends, and AI.
+            </p>
+        </div>
+        
+        <hr>
+
+        <div class="row">
+            <!-- Aluminium Industry Magazines -->
+            <div class="col-md-6">
+                <div class="section aluminium-section">
+                    <h2 class="text-primary section-title">Aluminium Industry Magazines</h2>
+                    <ul class="list-group">
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="text-truncate">
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium International Today (AIT)</a>
+                                <p class="mb-0 small text-muted">Journal dedicated to the production and processing of aluminium.</p>
+                            </div>
+                            <a href="https://aluminiumtoday.com/about-aluminium-international-today" target="_blank" class="btn btn-custom btn-sm">Click to Read</a>
+                        </li>
+                        
+                        <!--
+                        <li class="list-group-item">
+                            <div>
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium International Today (AIT)</a>
+                                <p class="mb-0">Journal dedicated to the production and processing of aluminium.</p>
+                            </div>
+                            <div class="text-end">
+                                <a href="https://aluminiumtoday.com/about-aluminium-international-today" target="_blank" class="btn btn-custom btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+                        -->
+                                               
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="text-truncate">
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium Journal</a>
+                                <p class="mb-0">Aluminium related latest news and articles.</p>
+                            </div>
+                            <a href="https://www.aluminium-journal.com/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="text-truncate">
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium Circle</a>
+                                <p class="mb-0">Aluminium E-magazines and industry reports.</p>
+                            </div>
+                            <a href="https://www.alcircle.com/emagazine" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="text-truncate">
+                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">Alfed Magazine</a>
+                            <p class="mb-0">UK aluminium Industry Trends and activities.</p>
+                            </div>
+                        <a href="https://alfed.org.uk/media/aluminium-news-magazine/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="text-truncate">
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">International Aluminum Magazine</a>
+                                <p class="mb-0">Innovations in the Aluminium industry with Statistical analysis</p>
+                            </div>
+                            <a href="https://international-aluminium.org/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div>
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium Extrusion Magazine</a>
+                                <p class="mb-0">Your place for Aluminium Extrusion, Technology, Finishing and Applications.</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://www.aluminiumextrusion.it/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="text-truncate">
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">Aluminium Association Magazine</a>
+                                <p class="mb-0">American AL industry trends and reports</p>
+                            </div>
+                            <a href="https://www.aluminum.org/resource-library" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div>
+                                <a href="#" style="font-size: 1.2rem; font-weight: bold;">ASM Handbook Online</a>
+                                <p class="mb-0">Aluminium related books and research methodologies for Aluminium Extrusions and other advancements.</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://dl.asminternational.org/handbooks/edited-volume/63/Aluminum-Science-and-Technology" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- New Technology Trends -->
+            <div class="col-md-6">
+                <div class="section tech-section">
+                    <h2 class="text-success section-title">New Technology Trends</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div>
+                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">MIT Technology Review</a>
+                            <p class="mb-0">MIT University website for latest trend in technology.</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://www.technologyreview.com/account/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div>
+                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">Automation World</a>
+                            <p class="mb-0">Latest automation and industry 4.0 standards in Manufacturing industry</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://www.automationworld.com/factory" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div>
+                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">Modern Machine Shop</a>
+                            <p class="mb-0">Machine Shop latest advancements in tooling,CNCs and other machining techniques</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://www.mmsonline.com/articles" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div>
+                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">Internet Of Things (IOT) Analytics</a>
+                            <p class="mb-0">Internet of things(IoT) based latest developments, articles and newsletters.</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://iot-analytics.com/research-blog/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div>
+                            <a href="#" style="font-size: 1.2rem; font-weight: bold;">WebFX</a>
+                            <p class="mb-0">Manufacturing industry latest trends, insights and sustainability goals.</p>
+                            </div>
+                            <div class="text-end">
+                            <a href="https://www.webfx.com/industries/industrial/manufacturing/manufacturing-industry-trends/" target="_blank" class="btn btn-custom float-end btn-sm">Click to Read</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<hr>
+<footer>
+    <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" > Excellence is a continuos process and not an accident. Keep Learning and Keep improving!</p>
+    <p style="font-size:0.9rem;"> Thank you for visiting GAPL Digital Library!</p>
+    <p style="font-size:0.9rem;"> For any Queries or feedback, contact IT Support on:  it@globalaluminium.com</p>
+</footer> 
+</body>
+</html>

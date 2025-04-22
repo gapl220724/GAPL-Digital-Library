@@ -1,0 +1,125 @@
+body {
+    background: url("images/Background.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/* Header Styling */
+.header-container {
+    background: linear-gradient(to right, #007bff, #0e0865cb);
+    color: rgb(247, 171, 9);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.header-container img {
+    width: 180px; /* Adjust logo size */
+    height: 100px;
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column; /* Stack h1 and p */
+    align-items: center; /* Center both h1 and p */
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.header-container p {
+    margin-top: 5px;
+    font-size: 18px;
+}
+/*footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: #101010;
+}*/
+.paragraph-container {
+background: linear-gradient(to right, #007bff, #0e0865cb); /* Light blue gradient */
+padding: 0px;
+border-radius: 5px;
+text-align: center;
+color: rgb(247, 171, 9); /* Ensure text is visible */
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+/* Section Styles */
+.section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.aluminium-section {
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+.tech-section {
+    background: linear-gradient(to right, #d4edda, #c8e6c9);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 3px solid #007bff;
+}
+
+/* Buttons */
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+/*btn-custom {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}*/
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+/* Apply gradient background to footer */
+footer 
+    {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: rgb(247, 171, 9);
+    background: linear-gradient(to right, #007bff, #0e0865cb); /* Aluminium section gradient */
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+hr {
+    width: 75%;
+    color: white;
+    background-color: rgb(247, 171, 9);
+    /*border: 2px solid white;*/
+    margin: 10px auto;
+    border: 2px solid var(--primary-color); 
+}

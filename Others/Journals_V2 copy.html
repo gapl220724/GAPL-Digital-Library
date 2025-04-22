@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazines & Journals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="C:\Users\Lenovo\Desktop\Web_dev\Hostel Occupancy Tracker Website\Images\favicon.ico.jpg">
+    
+    <style>
+        body {
+    background: url('./Images/Background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Semi-transparent background for better text visibility */
+.container {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Header Styling */
+.header-container {
+    background: rgba(0, 123, 255, 0.8); /* Semi-transparent gradient */
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header-container img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-text h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header-text p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Section Styles */
+.section {
+    background: rgba(255, 255, 255, 0.9); /* White with transparency */
+    color: #000; /* Dark text for readability */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 3px solid #007bff;
+}
+
+/* Buttons */
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.7); /* Dark footer */
+    border-radius: 8px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-container img {
+        margin-bottom: 10px;
+    }
+    
+    .header-text h1 {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Header Section -->
+        <div class="header-container">
+            <img src="C:\Users\Lenovo\Desktop\Web_dev\Hostel Occupancy Tracker Website\Images\GAPL_LOGO.png" alt="GAPL Logo">
+            <div class="header-text">
+                <h1>Welcome To GAPL Digital Library</h1>
+                <p>The capacity to learn is a Gift ; the ability to learn is a Skill ; the willingness to learn is a choice. - APJ Abdul Kalam</p>
+            </div>
+        </div>
+        
+        
+        <hr>
+        <p class="text-center text-dark">Access the latest magazines and journals on aluminium, technology trends, and AI.</p>
+        <hr>
+
+        <div class="row">
+            <!-- Aluminium Industry Magazines -->
+            <div class="col-md-6">
+                <div class="section aluminium-section">
+                    <h2 class="text-primary section-title">Aluminium Industry Magazines</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="#">Aluminium International Today (AIT)</a>
+                            <a href="https://aluminiumtoday.com/about-aluminium-international-today" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>                        
+                        <li class="list-group-item">
+                            <a href="#">Aluminium Journal</a>
+                            <a href="https://www.aluminium-journal.com/" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Aluminium Circle</a>
+                            <a href="https://www.alcircle.com/emagazine" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Alfed Magazine</a>
+                            <a href="https://alfed.org.uk/media/aluminium-news-magazine/" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">International Aluminum Magazine</a>
+                            <a href="https://international-aluminium.org/" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Aluminium Extrusion Magazine</a>
+                            <a href="https://www.aluminiumextrusion.it/" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Aluminium Association Magazine</a>
+                            <a href="https://www.aluminum.org/subscribe" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">ASM Handbook Online</a>
+                            <a href="https://dl.asminternational.org/handbooks/edited-volume/63/Aluminum-Science-and-Technology" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- New Technology Trends -->
+            <div class="col-md-6">
+                <div class="section tech-section">
+                    <h2 class="text-success section-title">New Technology Trends</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="#">MIT Technology Review</a>
+                            <a href="https://www.technologyreview.com/account/" target="_blank" class="btn btn-custom float-end">Click to Read</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Tech Innovations Weekly</a>
+                            <button class="btn btn-custom float-end">Click to Read</button>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">AI & Future Tech</a>
+                            <button class="btn btn-custom float-end">Click to Read</button>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Smart Manufacturing Journal</a>
+                            <button class="btn btn-custom float-end">Click to Read</button>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Digital Transformation Digest</a>
+                            <button class="btn btn-custom float-end">Click to Read</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<hr style="color: tomato;">
+</body>
+</html>
+<footer>
+    <p style="font: bold;">Excellence is a continuos process and not an accident. Keep Learning and Keep improving!</p>
+    <p style="color:green;font: bold;"> Thank you for visiting GAPL Digital Library!</p>
+</footer>
+ 

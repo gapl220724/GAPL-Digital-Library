@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global's Digital Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico.jpg">-->
+    <link rel="icon" type="image/x-icon" href="https://drive.google.com/thumbnail?id=1pnArN_cqMcgjLCp-f_FiD4Z022fZboJn">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #555;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --font-family: 'Arial', sans-serif;
+            --input-border-color: #ccc;
+            --button-hover-color: #0056b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        p {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        form {
+            background-color: lightsteelblue;;
+            border: 3px solid #007BFF;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form img {
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        form label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            border: 1px solid var(--input-border-color);
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        #feedback-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid var(--input-border-color);
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        #feedback-popup p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        #feedback-popup button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #feedback-popup button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 12px;
+            }
+
+            form input,
+            form select,
+            form button,
+            header h1,
+            h2,
+            p {
+                font-size: 0.9rem;
+            }
+        }
+        footer 
+            {
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.5rem;
+            color: rgb(247, 171, 9);
+            background: linear-gradient(to right, #007bff, #0e0865cb); /* Aluminium section gradient */
+            border-radius: 10px;
+            font-weight: bold;
+            line-height: 1;
+            margin-top: auto;
+        
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-container row align-items-center">
+            <div class="col-md-2 text-center">
+                <!--<img src="images/GAPL_Logo.jpeg" height="20" alt="GAPL Logo" class="img-fluid" style="border-radius: 10px; margin-bottom: 0px;">-->
+                <img src="images/GAPL_Logo.jpeg" alt="GAPL Logo" class="img-fluid" style="max-height: 70px;border-radius: 10px; margin-bottom: 0px;">
+
+                <!-- <img src="https://drive.google.com/thumbnail?id=1-vmUuTSyWvfRiCBlXM0Ga9eghoduX8ni" alt="GAPL LOGO">-->
+            </div>
+
+            <div class="col-md-8 text-center">
+                <h1 style="font-size: 20px;font-weight: bold;margin-bottom: 0px;">Welcome To Digital Library</h1>
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    The capacity to learn is a Gift; the ability to learn is a Skill; the willingness to learn is a choice.- APJ Abdul Kalam
+                </p>
+            </div>
+            <div class="col-md-2 text-center" style="margin-bottom:5px;border-radius: 5px;">
+                <button class="btn btn-outline-success"; onclick="document.location='emp_feedback.html'"><b>Click to give your Feedback!!</b></button>
+            </div>
+        </div>
+
+        <div class="paragraph-container">
+            <p class="text-center">
+                Access to learn the latest magazines and journals on aluminium, technology trends, and AI.
+            </p>
+        </div>
+        
+        <main>
+        
+            <form id="login-form">
+                <img src="images/Great Place to work Cerified.png" width="350" height="80" alt="GAPL Logo">
+        
+                <div class="d-flex align-items-center">
+                    <label for="username" style="margin-right: 30px;">Username:</label>
+                    <input type="text" class="form-control me-2" placeholder="Username" id="username">                    
+                </div>
+                
+                <div class="d-flex align-items-center">
+                <label for="password" style="margin-right: 30px;">Password:</label>
+                <input type="password" class="form-control me-2" id="password" name="password" required placeholder="Enter Password">
+                </div>
+                <label style="margin-left: 110px;">
+                    <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()"> Show Password
+                </label>
+                
+        
+                <label for="unit-select">Select Library Location:</label>
+                <select id="unit-select" name="unit">
+                    <option>Unit-I</option>
+                    <option selected>Unit-II</option>
+                    <option disabled>Head Office</option>
+                </select>
+        
+                <button type="submit">Submit</button>
+                
+            </form>
+            <button class="btn btn-secondary btn-md btn-block" onclick=" window.open('GAPL_Library_SOP.pdf','_blank')"> Click for SOP Documents (Do's & Dont's)</button>
+            <hr>
+            <!-- Popup Modal -->
+            <div id="feedback-popup">
+                <p id="popup-message">Login successful!</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </main>
+        
+        <script>
+            document.getElementById('login-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                /*
+                const correctUsername = "gapl";
+                const correctPassword = "gapl220724";
+                */
+               // for multiple users
+               const users = {
+                "Press_prod":"Gapl@prod",
+                "Tool_room":"Gapl@design",
+                "Anodizing":"Gapl@anod",
+                "Powder_coating":"Gapl@pc",
+                "Machine_shop":"Gapl@mcshop",
+                "Foundry":"Gapl@foundry",
+                "HR_admin":"Gapl@hr",
+                "Stores":"Gapl@stores",
+                "Safety":'gapl@safety',
+                "Maintenance":"Gapl@maint",
+                "Civil":"Gapl@civil",
+                "IT_services":"Gapl@it1",
+                "PCD_NPD": "Gapl@pcd",
+                "Quality": "Gapl@quality",
+                "Quality_VA": "Gapl@qva",
+                "Packing_dispatch": "Gapl@dispatch"
+               }
+        
+                if (users[username] && users[username] === password) {    
+                window.location.href = "AL_mag.html";
+                } else {
+                    showPopup("Incorrect username or password. Please try again.");
+                }
+            });
+        
+            function togglePasswordVisibility() {
+                const passwordField = document.getElementById('password');
+                passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
+            }        
+                function showPopup(message) {
+                const popup = document.getElementById('feedback-popup');
+                document.getElementById('popup-message').textContent = message;
+                popup.style.display = 'block';
+            }        
+            function closePopup() {
+                document.getElementById('feedback-popup').style.display = 'none';
+            } 
+            
+        </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+    <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" > 
+        Excellence is a continuos process and not an accident. Keep Learning and Keep improving!
+    </p>
+    <p > Thank you for visiting GAPL Digital Library!</p>
+    <p style="margin-bottom: 0px;"> For any Queries or feedback, contact IT Support on:  it@globalaluminium.com</p>
+</footer> 
+</body>
+</html>
